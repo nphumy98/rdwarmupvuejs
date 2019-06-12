@@ -12,7 +12,7 @@ new Vue({
 
 new Vue({
   render: h => h(Header),
-}).$mount('#header')
+}).$mount('#headComp')
 
 new Vue({
   render: h => h(LeftPanel),

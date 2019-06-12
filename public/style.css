@@ -1,0 +1,61 @@
+header {
+  background-color: #fff;
+  width:100%;
+}
+
+html,
+body {
+  background-color: #f3f3f3;
+  height:100%;
+  margin:0;   /* margin 0 so no more margin from nav to top of web */
+}
+
+button {
+  background-color: #fff;
+  margin:1px;
+  border-radius: 4px;
+}
+
+.l_panel {
+  position: fixed;
+  top: 0;
+  left: -400px;
+  background-color: #1b408c;
+  color: #fff;
+  width: 400px;
+  height: 100%;
+  transition: 0.8s;
+}
+
+.hide_button {
+  float:right; /* make the button on the right side of the slide panel */
+}
+
+.r_panel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: margin-left 0.8s;
+}
+
+.l_container{
+  width: 200px;
+  height: 200px;
+  padding:0;
+}
+
+.smartpay_logo {
+  position: relative;   /* position fixed help the logo position related to brower window */
+  width: 100%;
+  height:100%;
+  animation-name: slowlyappear;   /* make animation for logo */
+  animation-duration: 4s;
+}
+
+/* animation for smartpay_logo image */
+@keyframes slowlyappear {
+  from{opacity: 0;}
+  to% {visibility: visible;opacity: 1;}
+}

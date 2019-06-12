@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  name: 'header'
+  name: 'headComp'
 }
 </script>
