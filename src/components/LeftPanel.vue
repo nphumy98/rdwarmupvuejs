@@ -4,9 +4,3 @@
   <span>I am a left panel!</span>
 </div>
 </template>
-
-<script>
-export default {
-  name: 'leftPanel'
-}
-</script>
