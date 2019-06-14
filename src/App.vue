@@ -1,15 +1,22 @@
 <template>
   <div class="container">
-    <header-comp></header-comp>
-    <left-panel></left-panel>
-    <right-panel></right-panel>
+    <Header></Header>
+    <LeftPanel></LeftPanel>
+    <RightPanel></RightPanel>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
+  import Header from './components/Header.vue'
+  import LeftPanel from './components/LeftPanel.vue'
+  import RightPanel from './components/RightPanel.vue'
 
-export default {
-  name: 'app'
-}
+  export default {
+    name: 'app',
+    components: {
+      Header,
+      LeftPanel,
+      RightPanel
+    }
+  }
 </script>
