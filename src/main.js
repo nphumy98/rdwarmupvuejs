@@ -10,5 +10,5 @@ Vue.component('left-panel',LeftPanel);
 Vue.component('right-panel',RightPanel);
 
 new Vue({
-  el: '#app'
+  el: '.container'
 })

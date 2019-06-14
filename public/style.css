@@ -55,7 +55,7 @@ button {
   animation-duration: 4s;
 }
 
-#app {
+.container {
   height:inherit;
 }
 /* animation for smartpay_logo image */
