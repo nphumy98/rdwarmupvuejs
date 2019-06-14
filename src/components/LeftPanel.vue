@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'left-panel'
+  name: 'LeftPanel'
 }
 </script>
