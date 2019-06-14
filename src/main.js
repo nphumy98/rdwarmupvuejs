@@ -1,18 +1,14 @@
 import Vue from 'vue'
+import App from './App.vue'
 import Header from './components/Header.vue'
 import LeftPanel from './components/LeftPanel.vue'
 import RightPanel from './components/RightPanel.vue'
 
 Vue.config.productionTip = false
 
+Vue.component('header-comp',Header);
+Vue.component('left-panel',LeftPanel);
+Vue.component('right-panel',RightPanel);
 new Vue({
-  render: h => h(Header),
-}).$mount('#head-comp')
-
-new Vue({
-  render: h => h(LeftPanel),
-}).$mount('#left-panel')
-
-new Vue({
-  render: h => h(RightPanel),
-}).$mount('#right-panel')
+  render: h => h(App),
+}).$mount('#app')
