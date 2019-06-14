@@ -9,6 +9,7 @@ Vue.config.productionTip = false
 Vue.component('header-comp',Header);
 Vue.component('left-panel',LeftPanel);
 Vue.component('right-panel',RightPanel);
+
 new Vue({
   render: h => h(App),
 }).$mount('#app')
