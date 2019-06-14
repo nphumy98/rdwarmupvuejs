@@ -1,13 +1,13 @@
 function show_panel() {
-  document.getElementById("left_panel").style.left = "0px";
-  document.getElementById("right_panel").style.marginLeft = "400px";
-  document.getElementById("right_panel").style.width= String(get_width('right_panel')-400)+"px";
+  document.getElementById("left-panel-id").style.left = "0px";
+  document.getElementById("right-panel-id").style.marginLeft = "400px";
+  document.getElementById("right-panel-id").style.width= String(get_width('right-panel-id')-400)+"px";
 }
 
 function hide_panel() {
-  document.getElementById("left_panel").style.left = "-400px";
-  document.getElementById("right_panel").style.marginLeft = "0px";
-  document.getElementById("right_panel").style.width= String(get_width('right_panel')+400)+"px";
+  document.getElementById("left-panel-id").style.left = "-400px";
+  document.getElementById("right-panel-id").style.marginLeft = "0px";
+  document.getElementById("right-panel-id").style.width= String(get_width('right-panel-id')+400)+"px";
 }
 
 function get_width(id) {

@@ -7,12 +7,12 @@ Vue.config.productionTip = false
 
 new Vue({
   render: h => h(Header),
-}).$mount('#headComp')
+}).$mount('#head-comp')
 
 new Vue({
   render: h => h(LeftPanel),
-}).$mount('#leftPanel')
+}).$mount('#left-panel')
 
 new Vue({
   render: h => h(RightPanel),
-}).$mount('#rightPanel')
+}).$mount('#right-panel')

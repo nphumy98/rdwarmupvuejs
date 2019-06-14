@@ -16,7 +16,7 @@ button {
   border-radius: 4px;
 }
 
-.l_panel {
+.lPanel {
   position: fixed;
   top: 0;
   left: -400px;
@@ -27,11 +27,11 @@ button {
   transition: 0.8s;
 }
 
-.hide_button {
+.hideButton {
   float:right; /* make the button on the right side of the slide panel */
 }
 
-.r_panel {
+.rPanel {
   display: flex;
   height: 100%;
   width: 100%;
@@ -40,13 +40,13 @@ button {
   transition: margin-left 0.8s;
 }
 
-.l_container{
+.rContainer{
   width: 200px;
   height: 200px;
   padding:0;
 }
 
-.smartpay_logo {
+.smartpayLogo {
   position: relative;   /* position fixed help the logo position related to brower window */
   width: 100%;
   height:100%;

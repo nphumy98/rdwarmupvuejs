@@ -1,7 +1,7 @@
 <template>
-<div id="right_panel" class="r_panel container">
-  <div id="logo_container" class="l_container container">
-    <img class ="smartpay_logo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
+<div id="right-panel-id" class="rPanel">
+  <div class="rContainer">
+    <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
   </div>
 </div>
 </template>
