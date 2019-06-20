@@ -1,7 +1,10 @@
 <template>
 <div id="right-panel-id" class="rPanel">
   <!-- <loading-screen v-if="isLoading==true"></loading-screen> -->
-  <div class="rContainer" v-if="this.company.first !=null">
+  <div class="rContainer" v-if="this.isLoading==true">
+    <loading-screen></loading-screen>
+  </div>
+  <div class="rContainer" v-else-if="this.isLoading==false && this.company.first !=null">
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
     <table>
       <tr>
@@ -44,7 +47,7 @@ export default {
       .catch((error) => {
         this.company="Connect to Sever Fail";
         console.log(error);
-
+        this.isLoading=false;
       })
   }
 }
