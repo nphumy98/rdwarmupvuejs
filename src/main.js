@@ -26,7 +26,7 @@ new Vue({
       })
       .catch((error) => {
         console.log(error);
-        this.info = response
+        this.info = "Connect to Sever Fail"
       })
   }
 })
