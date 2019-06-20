@@ -2,7 +2,8 @@
 <div id="right-panel-id" class="rPanel">
   <!-- <loading-screen v-if="isLoading==true"></loading-screen> -->
   <div class="rContainer" v-if="this.isLoading==true">
-    <loading-screen></loading-screen>
+    <Loading></Loading>
+    <!-- <loading-screen></loading-screen> -->
   </div>
   <div class="rContainer" v-else-if="this.isLoading==false && this.company.first !=null">
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
@@ -27,9 +28,13 @@
 
 <script>
 import axios from 'axios';
+import Loading from './Loading.vue'
 
 export default {
   name: 'RightPanel',
+  components: {
+    Loading
+  },
   data () {
    return {
      company: null,
