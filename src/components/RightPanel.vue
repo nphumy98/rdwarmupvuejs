@@ -9,17 +9,7 @@
       <tr v-for="item in this.company">
         <td>{{item}}</td>
       </tr>
-      <!-- <tr>
-        <td>{{company.second}}</td>
-      </tr>
-      <tr>
-        <td>{{company.third}}</td>
-      </tr> -->
     </table>
-    <!-- <ul>
-      <li v-for="item in this.company">{{ item }}</li>
-    </ul> -->
-
   </div>
   <div class="rContainer" v-else>
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
