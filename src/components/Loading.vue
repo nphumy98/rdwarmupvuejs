@@ -15,6 +15,7 @@ export default {
   border-top: 8px solid #3498db;
   width: 40px;
   height: 40px;
+  margin:auto;
   -webkit-animation: spin 2s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
