@@ -20,6 +20,13 @@ new Vue({
   mounted () {
     axios
       .get('http://localhost:3000/companies')
-      .then(response => (this.info = response))
+      .then((response) => {
+        console.log(response.data);
+        this.info = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+        this.info = response
+      })
   }
 })
