@@ -6,16 +6,20 @@
   <div class="rContainer" v-else-if="this.isLoading==false && this.company.first !=null">
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
     <table>
-      <tr>
-        <td>{{company.first}}</td>
+      <tr v-for="item in this.company">
+        <td>{{item}}</td>
       </tr>
-      <tr>
+      <!-- <tr>
         <td>{{company.second}}</td>
       </tr>
       <tr>
         <td>{{company.third}}</td>
-      </tr>
+      </tr> -->
     </table>
+    <!-- <ul>
+      <li v-for="item in this.company">{{ item }}</li>
+    </ul> -->
+
   </div>
   <div class="rContainer" v-else>
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
@@ -35,7 +39,7 @@ export default {
   },
   data () {
    return {
-     company: null,
+     company: [],
      isLoading: true
    }
  },
