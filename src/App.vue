@@ -20,3 +20,24 @@ export default {
   }
 }
 </script>
+
+<style>
+header {
+  background-color: #fff;
+  width:100%;
+}
+
+html,
+body {
+  background-color: #f3f3f3;
+  height:100%;
+  margin:0;   /* margin 0 so no more margin from nav to top of web */
+  padding:0;
+}
+
+button {
+  background-color: #fff;
+  margin:1px;
+  border-radius: 4px;
+}
+</style>

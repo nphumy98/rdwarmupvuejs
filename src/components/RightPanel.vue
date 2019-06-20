@@ -49,3 +49,38 @@ export default {
   }
 }
 </script>
+
+<style>
+.rPanel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  transition: margin-left 0.8s;
+}
+
+.rContainer{
+  display:flex;
+  width: 200px;
+  height: 200px;
+  padding:0;
+}
+
+.smartpayLogo {
+  position: relative;   /* position fixed help the logo position related to brower window */
+  width: 100%;
+  height:100%;
+  animation-name: slowlyappear;   /* make animation for logo */
+  animation-duration: 4s;
+}
+
+.container {
+  height:inherit;
+}
+/* animation for smartpay_logo image */
+@keyframes slowlyappear {
+  from{opacity: 0;}
+  to% {visibility: visible;opacity: 1;}
+}
+</style>
