@@ -1,6 +1,6 @@
 <template>
 <header>
-  <button type="button" onclick="show_panel();">></button>
+  <button type="button" v-on:click="show_panel()">></button>
 </header>
 </template>
 

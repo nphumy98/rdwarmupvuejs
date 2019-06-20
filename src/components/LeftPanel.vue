@@ -1,6 +1,6 @@
 <template>
 <div id="left-panel-id" class="lPanel">
-  <button class="hideButton" type="button" onclick="hide_panel();">&#9747;</button>
+  <button class="hideButton" type="button" v-on:click="hide_panel()">&#9747;</button>
   <span>I am a left panel!</span>
 </div>
 </template>
