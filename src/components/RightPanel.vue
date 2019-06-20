@@ -6,7 +6,7 @@
   <div class="rContainer" v-else-if="this.isLoading==false && this.company.first !=null">
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
     <table>
-      <tr v-for="item in this.company">
+      <tr v-for="item in this.company" :key="item.id">
         <td>{{item}}</td>
       </tr>
     </table>
