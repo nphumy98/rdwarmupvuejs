@@ -7,7 +7,26 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-  name: 'RightPanel'
+  name: 'RightPanel',
+  data () {
+   return {
+     info: null
+   }
+ },
+  mounted () {
+    axios
+      .get('http://localhost:3000/companies')
+      .then((response) => {
+        console.log(response.data);
+        this.info = response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+        this.info = "Connect to Sever Fail"
+      })
+  }
 }
 </script>
