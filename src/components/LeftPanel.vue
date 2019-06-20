@@ -7,7 +7,19 @@
 
 <script>
 export default {
-  name: 'LeftPanel'
+  name: 'LeftPanel',
+  methods:{
+    get_width: function (id) {
+      var element = document.getElementById(id);
+      var positionInfo = element.getBoundingClientRect();
+      return positionInfo.width;
+    },
+    hide_panel: function() {
+      document.getElementById("left-panel-id").style.left = "-400px";
+      document.getElementById("right-panel-id").style.marginLeft = "0px";
+      document.getElementById("right-panel-id").style.width= String(this.get_width('right-panel-id')+400)+"px";
+    }
+  }
 }
 </script>
 
