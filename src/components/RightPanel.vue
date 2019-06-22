@@ -40,8 +40,8 @@ export default {
     axios
       .get('http://localhost:3000/companies')
       .then((response) => {
-        console.log(response.data.company);
-        this.company = response.data.company;
+        console.log(response.data.companies);
+        this.company = response.data.companies;
         this.isLoading=false;
       })
       .catch((error) => {
