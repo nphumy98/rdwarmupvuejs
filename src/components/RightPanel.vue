@@ -1,19 +1,22 @@
 <template>
 <div id="right-panel-id" class="rPanel">
-  <div class="rContainer" v-if="this.isLoading==true">
+  <div class="data" v-if="this.isLoading==true">
     <Loading></Loading>
   </div>
-  <div class="rContainer" v-else-if="this.isLoading==false && this.company.first !=null">
-    <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
+  <div class="data" v-else-if="this.isLoading==false && this.company[0] !=null">
     <table>
       <tr v-for="item in this.company" :key="item.id">
         <td>{{item}}</td>
       </tr>
     </table>
   </div>
-  <div class="rContainer" v-else>
-    <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
+  <div class="data" v-else>
     <p>{{company}}</p>
+  </div>
+  <div class="rContainer">
+    <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
+  </div>
+    <div class="auxilary">
   </div>
 </div>
 </template>
@@ -37,8 +40,8 @@ export default {
     axios
       .get('http://localhost:3000/companies')
       .then((response) => {
-        console.log(response.data);
-        this.company = response.data;
+        console.log(response.data.company);
+        this.company = response.data.company;
         this.isLoading=false;
       })
       .catch((error) => {
@@ -55,15 +58,15 @@ export default {
   display: flex;
   height: 100%;
   width: 100%;
+  flex-direction:column;
   align-items: center;
-  justify-content: center;
   transition: margin-left 0.8s;
 }
 
 .rContainer{
   display:flex;
   width: 200px;
-  height: 200px;
+  height: 20%;
   padding:0;
 }
 
@@ -73,6 +76,16 @@ export default {
   height:100%;
   animation-name: slowlyappear;   /* make animation for logo */
   animation-duration: 4s;
+}
+
+.data {
+  margin-top:5px;
+  height:40%;
+  color: red;
+}
+
+.auxilary {
+  height: 40%;
 }
 
 .container {
