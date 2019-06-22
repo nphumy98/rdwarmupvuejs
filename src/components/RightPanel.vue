@@ -3,7 +3,7 @@
   <div class="data" v-if="this.isLoading==true">
     <Loading></Loading>
   </div>
-  <div class="data" v-else-if="this.isLoading==false && this.company[0] !=null">
+  <div class="data" v-else-if="this.isLoading==false && this.company !='Connect to Sever Fail'">
     <table>
       <tr v-for="item in this.company" :key="item.id">
         <td>{{item}}</td>
