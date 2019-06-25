@@ -3,15 +3,16 @@
   <div class="data" v-if="this.isLoading==true">
     <Loading></Loading>
   </div>
-  <div class="data" v-else-if="this.isLoading==false && this.company !='Connect to Sever Fail'">
+  <div class="data" v-else-if="this.isLoading==false && this.companies !='Connect to Sever Fail'">
     <table>
-      <tr v-for="item in this.company" :key="item.id">
+      <tr v-for="item in this.companies" :key="item.id">
         <td>{{item}}</td>
       </tr>
     </table>
   </div>
   <div class="data" v-else>
-    <p>{{company}}</p>
+    <p>{{companies}}</p>
+    <button type="button" v-on:click="retry_request()">Retry</button>
   </div>
   <div class="rContainer">
     <img class ="smartpayLogo" src="../assets/smartpaylogo.svg" alt="smartpay_logo">
@@ -30,25 +31,33 @@ export default {
   components: {
     Loading
   },
-  data () {
-   return {
-     company: [],
-     isLoading: true
-   }
- },
-  mounted () {
-    axios
+  methods:{
+    retry_request: function() {
+      axios
       .get('http://localhost:3000/companies')
       .then((response) => {
         console.log(response.data.companies);
-        this.company = response.data.companies;
-        this.isLoading=false;
+        this.companies = response.data.companies;
       })
       .catch((error) => {
-        this.company="Connect to Sever Fail";
-        console.log(error);
-        this.isLoading=false;
+        this.companies ="Connect to Sever Fail";
+        this.isError = true;
+        console.log(error);  
       })
+      .finally(() => {
+        this.isLoading = false;
+      })
+    }
+  },
+  data () {
+   return {
+     companies: [],
+     isLoading: true,
+     isError: false
+   }
+  },
+  mounted () {
+    this.retry_request();    
   }
 }
 </script>
