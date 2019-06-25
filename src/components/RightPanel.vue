@@ -33,6 +33,7 @@ export default {
   },
   methods:{
     retry_request: function() {
+      this.isLoading=true;
       axios
       .get('http://localhost:3000/companies')
       .then((response) => {
@@ -40,7 +41,7 @@ export default {
         this.companies = response.data.companies;
       })
       .catch((error) => {
-        this.companies ="Connect to Sever Fail";
+        this.companies = "Connect to Sever Fail";
         this.isError = true;
         console.log(error);  
       })
